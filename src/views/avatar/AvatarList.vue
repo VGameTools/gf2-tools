@@ -1,8 +1,9 @@
 <template>
   <DefaultLayout>
-    <div class="avatar-container">
-      <div class="avatarList">
-        <div class="avatarItem" v-for="(item, index) in love" :key="index">
+    <div class="bg-[#f5f5f5] px-4 py-4">
+      <div class=" flex flex-wrap justify-between rounded-md">
+        <div class="size-28 mb-1 border border-xs border-[#eee] rounded-md overflow-hidden"
+          v-for="(item, index) in love" :key="index">
           <img :src="item.url" @click="open(item.name)">
         </div>
       </div>
@@ -11,7 +12,6 @@
 </template>
 
 <script setup>
-import "./index.css";
 import data from "../../data/avatar.json";
 import DefaultLayout from "../../layouts/DefaultLayout.vue";
 
